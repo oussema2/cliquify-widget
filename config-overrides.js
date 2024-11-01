@@ -7,6 +7,5 @@ module.exports = override((config) => {
     chunkFilename: "static/js/my-widget.[name].js",
     pathinfo: false,
     globalObject: "this",
-    publicPath: "/",
   };
 });
