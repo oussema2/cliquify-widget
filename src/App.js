@@ -1,4 +1,5 @@
-import Widget from "./Components/Widget.js";
+import "./App.css";
+import Widget from "./Components/Widget";
 function App() {
   return <Widget />;
 }
