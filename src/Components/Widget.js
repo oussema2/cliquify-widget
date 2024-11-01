@@ -6,7 +6,7 @@ import VideoPlayer from "./VideoPlayer";
 const Widget = () => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
   const options = window.VIDEOASK_EMBED_CONFIG;
-  console.log(window.VIDEOASK_EMBED_CONFIG.options);
+  // console.log(window.VIDEOASK_EMBED_CONFIG.options);
   return (
     <div
       style={{
