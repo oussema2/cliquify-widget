@@ -5,8 +5,8 @@ import CostumPlayer from "./CostumPlayer";
 import VideoPlayer from "./VideoPlayer";
 const Widget = () => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
-  console.log(window.VIDEOASK_EMBED_CONFIG.url);
   const options = window.VIDEOASK_EMBED_CONFIG;
+  console.log(window.VIDEOASK_EMBED_CONFIG.options);
   return (
     <div
       style={{
@@ -36,13 +36,12 @@ const Widget = () => {
         <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
           {isCostumePlayerShowed ? (
             <CostumPlayer
-              url={options?.url}
+              url={options.url}
               key="first"
               closePlayer={() => setIsCostumePlayerShowed(false)}
             />
           ) : (
             <VideoPlayer
-              url={options?.url}
               key="second"
               setIsCostumePlayerShowed={() => setIsCostumePlayerShowed(true)}
             />

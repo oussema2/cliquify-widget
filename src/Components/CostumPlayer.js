@@ -56,7 +56,7 @@ const CostumPlayer = ({ closePlayer, url }) => {
           playsInline
           muted={false}
           //   controls
-          src={url}
+          src="-En42PTGEzpgasK39_-KwWPpglc2TwFsFm9TKgHjUk6LaF4fGbfRJ2VUnKKYjYUcQ5viH8MYTUoNF_6CBsjuT-3Jhvd8047GsWXGtiwJWiqQXuGqJYw_XZWwlpyvy04YdHao0ddZH7gNb_pdQ0WegTQ5AbT6IW54sJt8Cwhr-v_JEnjok3s7Y4hjFFGH_jmCpQWiSpb5Tu2aQrkV0_EcZPs"
         />
       </div>
     </motion.div>
