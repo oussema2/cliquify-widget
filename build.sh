@@ -1,4 +1,5 @@
-npm run clean && npm run build
+rm -rf build
+npm run build
 git add .
 git commit -m "adding features"
 git push
