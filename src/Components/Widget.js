@@ -36,13 +36,13 @@ const Widget = () => {
         <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
           {isCostumePlayerShowed ? (
             <CostumPlayer
-              url={options.url}
+              url={options?.url}
               key="first"
               closePlayer={() => setIsCostumePlayerShowed(false)}
             />
           ) : (
             <VideoPlayer
-              url={options.url}
+              url={options?.url}
               key="second"
               setIsCostumePlayerShowed={() => setIsCostumePlayerShowed(true)}
             />
