@@ -6,7 +6,7 @@ import VideoPlayer from "./VideoPlayer";
 const Widget = () => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
   const options = window.VIDEOASK_EMBED_CONFIG;
-  console.log(isCostumePlayerShowed);
+  console.log("Hamadi");
   return (
     <div
       style={{
