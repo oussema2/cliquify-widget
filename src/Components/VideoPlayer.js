@@ -61,7 +61,7 @@ const VideoPlayer = ({ setIsCostumePlayerShowed, url }) => {
         }}
       >
         <p style={{ fontSize: "18px", color: "white", fontWeight: "bold" }}>
-          Live Demo
+          Live Demo xxxx
         </p>
       </div>
     </div>
