@@ -5,10 +5,10 @@ const Widget = () => {
   const options = window.WIDGET_PROPERTIES;
   console.log(options);
   const Components = {
-    "widget-with-modal": <WidgetWithModal options={options} />,
-    "widget-popup": <WidgetPopUp options={options} />,
+    modal: <WidgetWithModal options={options} />,
+    popup: <WidgetPopUp options={options} />,
   };
-  return Components["widget-with-modal"];
+  return Components[options.widgetType];
 };
 
 export default Widget;
