@@ -2,7 +2,8 @@
 import WidgetPopUp from "./Containers/widget-popup";
 import WidgetWithModal from "./Containers/widget-with-modal";
 const Widget = () => {
-  const options = window.VIDEOASK_EMBED_CONFIG;
+  const options = window.WIDGET_PROPERTIES;
+  console.log(options);
   const Components = {
     "widget-with-modal": <WidgetWithModal />,
     "widget-popup": <WidgetPopUp />,
