@@ -7,7 +7,7 @@ const Widget = () => {
     "widget-with-modal": <WidgetWithModal />,
     "widget-popup": <WidgetPopUp />,
   };
-  return Components["widget-with-modal"];
+  return Components["widget-popup"];
 };
 
 export default Widget;
