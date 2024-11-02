@@ -5,8 +5,8 @@ const Widget = () => {
   const options = window.WIDGET_PROPERTIES;
   console.log(options);
   const Components = {
-    "widget-with-modal": <WidgetWithModal />,
-    "widget-popup": <WidgetPopUp />,
+    "widget-with-modal": <WidgetWithModal options={options} />,
+    "widget-popup": <WidgetPopUp options={options} />,
   };
   return Components["widget-with-modal"];
 };

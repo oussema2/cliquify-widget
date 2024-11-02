@@ -4,7 +4,7 @@ import ModalVideo from "../modal-video";
 import VideoPlayer from "../video-plaer";
 import CostumPlayer from "../costum-player";
 
-const WidgetPopUp = () => {
+const WidgetPopUp = ({ options }) => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
 
   return (
@@ -41,6 +41,8 @@ const WidgetPopUp = () => {
             />
           ) : (
             <VideoPlayer
+              text={options.title}
+              url={options.videoUrl}
               key="second"
               setIsCostumePlayerShowed={() => setIsCostumePlayerShowed(true)}
             />

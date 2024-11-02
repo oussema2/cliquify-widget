@@ -3,7 +3,7 @@ import { SaveSmile } from "../../icons/save-smile";
 import ModalWidgetContent from "../modal-widget-content";
 import VideoPlayer from "../video-plaer";
 
-const WidgetWithModal = () => {
+const WidgetWithModal = ({ options }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   if (isModalOpen) {
     return <ModalWidgetContent closeModal={() => setIsModalOpen(false)} />;
