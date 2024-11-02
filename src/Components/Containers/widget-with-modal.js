@@ -6,7 +6,12 @@ import VideoPlayer from "../video-plaer";
 const WidgetWithModal = ({ options }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   if (isModalOpen) {
-    return <ModalWidgetContent closeModal={() => setIsModalOpen(false)} />;
+    return (
+      <ModalWidgetContent
+        options={options}
+        closeModal={() => setIsModalOpen(false)}
+      />
+    );
   } else {
     return (
       <div
@@ -36,6 +41,8 @@ const WidgetWithModal = ({ options }) => {
           </div>
           <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
             <VideoPlayer
+              url={options.videoUrl}
+              text={options.title}
               key="second"
               setIsCostumePlayerShowed={() => setIsModalOpen(true)}
             />

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { SaveSmile } from "../../icons/save-smile";
-import ModalVideo from "../modal-video";
-import VideoPlayer from "../video-plaer";
 import CostumPlayer from "../costum-player";
+import VideoPlayer from "../video-plaer";
 
 const WidgetPopUp = ({ options }) => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
