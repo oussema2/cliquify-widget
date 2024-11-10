@@ -10,7 +10,7 @@ const videos = [
   "https://library.jobpixel.com/ac/5a/ac5abda9-d030-4515-b995-a5bd03e106f1-preview.mp4?Expires=1730753494&Signature=iM7l5lpQUoxKDTsMhBGKVFIA4UZfqDN42hDpANRm5~ItEDsIZZJjy734m2WzLa-nBD7hEzBBJL9zJI9fNaLtNen~WetliKBNmO~tZ4m5f4OMmGeOKAlcuwShx5A8UrxxUgxaPU2iN4pCPnBjAWvULB0IsaQkdylUswcHO5ofBprjc124DU7-TgsDy8vkrZCBP-7A1QTTwpI4ZmbHmMFBAQiY2-~yny01e36lJPOxZTOihXB8wmTCh~6Zt3-wPkftxP50YwY~R1DAFI7TNtP8ydnWOYQsm3MEpAFSfk0muB0CNIMAAnDRRF7jWLub9eQ4-gTcv7sTQ2SP8hJ5zdzucQ__&Key-Pair-Id=K17NSBARH4W4OV",
 ];
 
-const WidgetStory = () => {
+const WidgetStory = ({ options }) => {
   const [isCostumePlayerShowed, setIsCostumePlayerShowed] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const handleNext = () => {

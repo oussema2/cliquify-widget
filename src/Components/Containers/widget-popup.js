@@ -35,13 +35,14 @@ const WidgetPopUp = ({ options }) => {
         <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
           {isCostumePlayerShowed ? (
             <CostumPlayer
+              url={options.videos[0].source}
               key="first"
               closePlayer={() => setIsCostumePlayerShowed(false)}
             />
           ) : (
             <VideoPlayer
               text={options.title}
-              url={options.videoUrl}
+              url={options.videos[0].source}
               key="second"
               setIsCostumePlayerShowed={() => setIsCostumePlayerShowed(true)}
             />
