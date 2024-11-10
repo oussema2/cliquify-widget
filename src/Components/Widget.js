@@ -18,7 +18,7 @@ const Widget = () => {
     story: <WidgetStory />,
   };
   // return Components["story"];
-  return <h1>Hello</h1>;
+  return <h1>Hello xxx</h1>;
 };
 
 export default Widget;
