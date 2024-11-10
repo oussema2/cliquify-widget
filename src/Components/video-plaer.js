@@ -2,7 +2,6 @@ import React from "react";
 import { Dash } from "../icons/dash";
 
 const VideoPlayer = ({ setIsCostumePlayerShowed, url, text }) => {
-  console.log(text);
   return (
     <div
       onClick={() => setIsCostumePlayerShowed()}

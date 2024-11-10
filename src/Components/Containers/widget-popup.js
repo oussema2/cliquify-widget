@@ -8,6 +8,7 @@ const WidgetPopUp = ({ options }) => {
 
   return (
     <div
+      className="widget"
       style={{
         position: "fixed",
         bottom: "20px",

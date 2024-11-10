@@ -46,7 +46,6 @@ const XlStoryPlayer = ({
       }
     });
   }, [currentIndex]);
-  console.log(hasMounted);
   return (
     <div
       onClick={() => closeModal()}

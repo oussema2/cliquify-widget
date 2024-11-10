@@ -5,6 +5,7 @@ const ModalWidgetContent = ({ closeModal, options }) => {
   const [showInnerModal, setShowInnerModal] = useState(false);
   return (
     <div
+      className="widget"
       style={{
         position: "fixed",
         top: 0,

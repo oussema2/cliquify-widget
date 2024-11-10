@@ -15,6 +15,7 @@ const WidgetWithModal = ({ options }) => {
   } else {
     return (
       <div
+        className="widget"
         style={{
           position: "fixed",
           bottom: isModalOpen ? 0 : "20px",

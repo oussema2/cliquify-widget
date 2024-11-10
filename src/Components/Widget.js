@@ -8,7 +8,6 @@ const Widget = () => {
   const options = window.WIDGET_PROPERTIES;
   const [widgetData, setwidgetData] = useState({});
   useEffect(() => {
-    console.log("runned");
     (async () => {
       const element = document.getElementById("widget-id");
       const attribute = element
@@ -17,14 +16,12 @@ const Widget = () => {
       const response = await axios.get(
         `http://localhost:4444/api/widgets/${attribute}`
       );
-      console.log(response.data.type);
       if (response.data) {
         setwidgetData(response.data);
       }
     })();
   }, []);
 
-  console.log(options);
   const Components = {
     Modal: <WidgetWithModal options={widgetData} />,
     PopUp: <WidgetPopUp options={widgetData} />,
