@@ -35,6 +35,9 @@ const WidgetPopUp = ({ options }) => {
         <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
           {isCostumePlayerShowed ? (
             <CostumPlayer
+              logo={options.logo.url}
+              logoPosition={options.logo.position}
+              frameColor={options.frameColor}
               url={options.videos[0].source}
               key="first"
               closePlayer={() => setIsCostumePlayerShowed(false)}

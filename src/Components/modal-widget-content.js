@@ -47,7 +47,7 @@ const ModalWidgetContent = ({ closeModal, options }) => {
               loop
               playsInline
               muted={true}
-              src={options.videoUrl}
+              src={options.videos[0].source}
             />
             <div
               onClick={() => setShowInnerModal(false)}

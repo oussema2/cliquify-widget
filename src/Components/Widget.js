@@ -10,7 +10,8 @@ const Widget = () => {
   useEffect(() => {
     console.log("runned");
     const element = document.getElementById("widget-id");
-    console.log(element);
+    const attribute = element.getAttribute("data-widget-id");
+    console.log(attribute);
     (async () => {
       const response = await axios.get(
         "http://localhost:4444/api/widgets/672f2b2e8935503c9c80dcc9"
@@ -27,8 +28,10 @@ const Widget = () => {
     popup: <WidgetPopUp options={widgetData} />,
     story: <WidgetStory options={widgetData} />,
   };
-  // return Components["story"];
-  return <h1>Hello xxx</h1>;
+  if (!widgetData.videos) {
+    return null;
+  }
+  return Components["modal"];
 };
 
 export default Widget;

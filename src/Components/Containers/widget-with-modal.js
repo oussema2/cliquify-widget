@@ -41,7 +41,7 @@ const WidgetWithModal = ({ options }) => {
           </div>
           <div style={{ position: "absolute", bottom: "16px", right: "16px" }}>
             <VideoPlayer
-              url={options.videoUrl}
+              url={options.videos[0].source}
               text={options.title}
               key="second"
               setIsCostumePlayerShowed={() => setIsModalOpen(true)}
