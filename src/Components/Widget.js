@@ -11,10 +11,9 @@ const Widget = () => {
     console.log("runned");
     const element = document.getElementById("widget-id");
     const attribute = element.getAttribute("data-widget-id");
-    console.log(attribute);
     (async () => {
       const response = await axios.get(
-        "http://localhost:4444/api/widgets/672f2b2e8935503c9c80dcc9"
+        `http://localhost:4444/api/widgets/${attribute}`
       );
       if (response.data) {
         setwidgetData(response.data);
@@ -24,14 +23,17 @@ const Widget = () => {
 
   console.log(options);
   const Components = {
-    modal: <WidgetWithModal options={widgetData} />,
-    popup: <WidgetPopUp options={widgetData} />,
-    story: <WidgetStory options={widgetData} />,
+    Modal: <WidgetWithModal options={widgetData} />,
+    PopUp: <WidgetPopUp options={widgetData} />,
+    Story: <WidgetStory options={widgetData} />,
   };
-  if (!widgetData.videos) {
+  if (!widgetData && !widgetData.videos) {
     return null;
   }
-  return Components["modal"];
+  if (!Components[widgetData.type]) {
+    return null;
+  }
+  return Components[widgetData.type];
 };
 
 export default Widget;
