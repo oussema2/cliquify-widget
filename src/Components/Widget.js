@@ -9,12 +9,15 @@ const Widget = () => {
   const [widgetData, setwidgetData] = useState({});
   useEffect(() => {
     console.log("runned");
-    const element = document.getElementById("widget-id");
-    const attribute = element.getAttribute("data-widget-id");
     (async () => {
+      const element = document.getElementById("widget-id");
+      const attribute = element
+        ? element.getAttribute("data-widget-id")
+        : "67313bdc99d513fdc0ed1808";
       const response = await axios.get(
         `http://localhost:4444/api/widgets/${attribute}`
       );
+      console.log(response.data.type);
       if (response.data) {
         setwidgetData(response.data);
       }
@@ -33,6 +36,8 @@ const Widget = () => {
   if (!Components[widgetData.type]) {
     return null;
   }
+  // return <h1>Hello</h1>;
+
   return Components[widgetData.type];
 };
 

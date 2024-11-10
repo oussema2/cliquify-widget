@@ -147,6 +147,37 @@ const XlStoryPlayer = ({
               }}
               transition={{ stiffness: 100, duration: 1 }}
             >
+              <div
+                style={{
+                  position: "absolute",
+                  left: "32px",
+                  top: 32,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  gap: "16px",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "normal",
+                    lineHeight: "20px",
+                  }}
+                >
+                  {video.recorder.name}
+                </p>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: "bold",
+                    lineHeight: "14px",
+                  }}
+                >
+                  {video.recorder.job}
+                </p>
+              </div>
               {currentIndex !== index && (
                 <div
                   style={{
@@ -167,7 +198,7 @@ const XlStoryPlayer = ({
               <video
                 onEnded={handleNext} // Trigger next video when this one ends
                 ref={(el) => (videoRefs.current[index] = el)} // Store the video reference
-                src={video}
+                src={video.source}
                 key={index}
                 playsInline
                 style={{

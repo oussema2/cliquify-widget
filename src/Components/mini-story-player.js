@@ -137,7 +137,7 @@ const MiniStoryPlayer = ({
               onEnded={handleVideoEnded} // Trigger next video when this one ends
               key={index}
               ref={(el) => (videoRefs.current[index] = el)} // Store the video reference
-              src={src}
+              src={src.source}
               playsInline
               autoPlay
               muted={true}
