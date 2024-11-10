@@ -17,7 +17,8 @@ const Widget = () => {
     popup: <WidgetPopUp options={options} />,
     story: <WidgetStory />,
   };
-  return Components["story"];
+  // return Components["story"];
+  return <h1>Hello</h1>;
 };
 
 export default Widget;
