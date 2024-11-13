@@ -14,7 +14,7 @@ const Widget = () => {
         ? element.getAttribute("data-widget-id")
         : "67313bdc99d513fdc0ed1808";
       const response = await axios.get(
-        `http://localhost:4444/api/widgets/${attribute}`
+        `https://widget-backend.vercel.app/api/widgets/${attribute}`
       );
       if (response.data) {
         setwidgetData(response.data);
